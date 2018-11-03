@@ -1,0 +1,14 @@
+{
+  "name": "restapi-project",
+  "version": "1.0.0",
+  "description": "TEST API Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luk3Sky",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
