@@ -1,13 +1,10 @@
 const express = require('express');
+const router = require('./routes/api');
 
 // Set up an express app
 const app = express();
 
-app.get('/api', function ( request, response ) {
-    console.log('GET in root route');    
-    response.send(' { user: "New-one" } ');
-    response.end();
-});
+app.use('/api',router);
 
 app.listen(process.env.port || 4000, function () {
     console.log('Now listening for requests!');
