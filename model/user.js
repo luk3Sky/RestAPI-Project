@@ -1,5 +1,5 @@
-const monsooge = require('mongoose');
-const Schema = monsooge.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // Create a user schema
 const UserSchema = new Schema({
@@ -13,11 +13,11 @@ const UserSchema = new Schema({
     },
     age:{
         type: Number,
-        required: [true, 'Age is required.']
+        default: 18,
     }
     // Add more properties
 });
 
-const User = monsooge.model('user', UserSchema);
+const User = mongoose.model('user', UserSchema);
 
 module.exports = User;
