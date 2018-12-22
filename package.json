@@ -4,13 +4,14 @@
   "description": "TEST API Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "luk3Sky",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "mongoose": "^5.3.9"
+    "mongoose": "^5.3.9",
+    "nodemon": "^1.18.9"
   }
 }
