@@ -13,8 +13,8 @@ app.use('/api', routes);
 
 // Third middleware - error handler
 app.use(function(err, req, res, next) {
-    console.log(err.ValidationError);
-    res.send({error:err.message});
+    console.log("error hanlded!");
+    res.status(422).send({error:err.sqlMessage});
 });
 
 // API listening
