@@ -1,9 +1,7 @@
 # RestAPI-Project
 An API to integrated with the database to work in CRUD operations
 
-### Can be associated with:
-- MySQL
-- MongoDB
+### Associated with MySQL
 
 ## Instructions to run the API:
 ``` bash

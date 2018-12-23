@@ -1,25 +1,21 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require('./routes/api');
-// const mongoose = require('mongoose');
 
 // Set up an express app
 const app = express();
 
-// Connect to mongodb
-// mongoose.connect('mongodb://localhost/userhandle', { useNewUrlParser: true });
-// mongoose.Promise = global.Promise;
-
-// Add middleware - body parser
+// First middleware - body parser
 app.use(bodyParser.json());
 
-// Add middleware - error handler
+// Second middleware - express route
+app.use('/api', routes);
+
+// Third middleware - error handler
 app.use(function(err, req, res, next) {
     console.log(err.ValidationError);
-}); 
-
-// Use express route
-app.use('/api', routes);
+    res.send({error:err.message});
+});
 
 // API listening
 app.listen(process.env.port || 5000, function () {
