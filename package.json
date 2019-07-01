@@ -1,7 +1,7 @@
 {
   "name": "restapi-project",
   "version": "1.0.0",
-  "description": "TEST API Project",
+  "description": "REST API Project",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
